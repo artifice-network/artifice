@@ -3,7 +3,7 @@
 <h2>Application Program Interface</h2>
 <p>in order to use the api to create custom applications please see api</P>
 <h2>Goals</h2>
-<p>The purpose of this project is to create a peer to peer secured network for IOT devices. in the long run, through its extensibility and api, this project will provide an open source, publicly available alternative to smart systems such as those manufactured by amazon, facebook, apple etc, and in so doing limit the ability to collect non-granted user information</p>
+<p>The purpose of this project is to create a peer to peer secured network for IOT devices. in the long run, through its extensibility api, this project will provide an open source, publicly available alternative to smart systems such as those manufactured by amazon, facebook, apple etc, and in so doing limit the ability to collect non-granted user information</p>
  
 <h2>Long term goals</h2>
 <p>Deploy artifice on top of a modified redox os, designed to provide networking capabilities through not only the NIC, but for raspberry pis the GPIO pins, and for desktops/laptops USB-C and PCI</p>
