@@ -34,9 +34,6 @@ async fn run_server(mut socket: SllpStream) -> Result<(), ExampleError> {
     loop {
         let recv_len = socket.recv(&mut read_buf).await?;
         for i in &read_buf {
-            if 1 == recv_len {
-                break;
-            }
             vec.push(*i);
         }
         let newframe = imdecode(&vec, -1)?;

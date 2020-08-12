@@ -7,6 +7,7 @@ use std::fmt;
 use tokio::runtime::{Handle, Runtime};
 use networking::asyncronous::{AsyncSend, AsyncNetworkHost};
 use std::net::{SocketAddr, IpAddr, Ipv4Addr};
+use networking::Layer3Addr;
 
 #[derive(Debug)]
 pub enum ExampleError {
@@ -34,11 +35,11 @@ impl From<networking::error::NetworkError> for ExampleError {
 async fn run(_handle: Handle) -> Result<(), ExampleError> {
     let (mut peer, mut config) = test_config();
     config.set_socket_addr(SocketAddr::new(IpAddr::V4(Ipv4Addr::new(127,0,0,1)), 3232));
-    let socket = SllpSocket::from_host_config(&config).await.unwrap();
+    let socket = SllpSocket::client_only(&config).await.unwrap();
     // the test peers address is localhost, but this example can only be run between two computersheader)
     // file in ip with remote ip
-    peer.set_socket_addr(SocketAddr::new(IpAddr::V4(Ipv4Addr::new(127,0,0,1)), 6464));
-    let mut stream = socket.connect(&peer).await;
+    //peer.set_socket_addr(SocketAddr::new(IpAddr::V4(Ipv4Addr::new(127,0,0,1)), 6464));
+    let mut stream = socket.connect(&peer).await.unwrap();
     println!("connected");
     let mut cam = videoio::VideoCapture::new(0, videoio::CAP_ANY)?; // 0 is the default camera
     let opened = videoio::VideoCapture::is_opened(&cam)?;
