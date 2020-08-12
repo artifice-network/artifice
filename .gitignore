@@ -1,3 +1,5 @@
 /camera_server/target
 /network_camera/target
 /target
+/network_microphone/target
+/speaker_server/target
