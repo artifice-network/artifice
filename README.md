@@ -18,3 +18,5 @@ Moore State Homormorphic Encryption (MoSHE) is a form of homorophic encryption i
 #### List of MoSHE Algorithims
 None are known to exist if this is not the case please email us.
 
+## Contact
+email: artificenetwork@gmail.com
