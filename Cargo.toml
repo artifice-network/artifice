@@ -3,10 +3,11 @@
 name = "artifice"
 version = "0.1.0-alpha1"
 authors = ["Julian Lazaras <umbrasdracodominus@gmail.com>"]
-edition = "2018"
+edition = "218"
 readme = "README.md"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 networking = "0.1.9"
+
